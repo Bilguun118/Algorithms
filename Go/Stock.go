@@ -2,6 +2,7 @@ package Go
 
 func buy_sell_stock(prices []int) int {
 	var result, temporary int
+	//Iterating over prices slice from starting second value
 	for idx := 1; idx < len(prices); idx++ {
 		temporary += prices[idx] - prices[idx-1]
 		if temporary < 0 {
