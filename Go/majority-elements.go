@@ -18,4 +18,4 @@ func majorityElement(nums []int) int {
 	return majority_element
 }
 
-//Call majorityElement Function in Main Function
+//Call majorityElement() Function in Main Function of Go Project
