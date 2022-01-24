@@ -1,5 +1,6 @@
 package Go
 
+//maxArea Function
 func maxArea(height []int) int {
 	//Init Max Area (Result)
 	maxAr := 0
