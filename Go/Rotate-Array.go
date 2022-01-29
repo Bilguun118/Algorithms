@@ -8,6 +8,7 @@ func rotate(nums []int, k int) {
 	reverse(nums, k, len(nums)-1)
 }
 
+//Reversing Function
 func reverse(nums []int, start, end int) {
 	// From Start to End loop
 	for start < end {
@@ -18,3 +19,5 @@ func reverse(nums []int, start, end int) {
 		end--
 	}
 }
+
+//Call rotate Function in Main Function in Golang
