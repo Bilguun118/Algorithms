@@ -9,7 +9,6 @@ func intersection(nums1 []int, nums2 []int) []int {
 	for _, idx := range nums1 {
 		hashmap[idx] = true
 	}
-
 	//Iterating Over second Slice to get same values
 	for _, idx := range nums2 {
 		if hashmap[idx] {
