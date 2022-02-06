@@ -9,6 +9,7 @@ func generateParenthesis(n int) []string {
 	return result
 }
 
+//Generating Parenthesis Function
 func GeneratingParenthesis(leftidx, rightidx int, str string, result *[]string) {
 	if leftidx == 0 && rightidx == 0 {
 		*result = append(*result, str)
