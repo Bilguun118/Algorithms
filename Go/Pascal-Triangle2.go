@@ -6,5 +6,5 @@ func getRow(rowIndex int) []int {
 	for idx := 1; idx <= rowIndex; idx++ {
 		row[idx] = row[idx-1] * (rowIndex - idx + 1) / idx
 	}
-	return row
+	return row	
 }
