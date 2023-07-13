@@ -1,0 +1,25 @@
+INPUTS:
+    1.FIRST LINE OF INPUT: N,Q,M
+        WHERE N IS: 1 < N < 10
+        TOTAL BUFFER SIZE: 1 < Q < 1000000
+        LENGTH OF OPERATION SEQUENCE: 1 < M < 1000000
+
+    2.SECOND LINE OF INPUT: T Integer in One Line
+        WHERE T is: 
+            for i in t:
+                i is priority level of tenant
+
+    3.THIRD LINE OF INPUT: D Integer in One Line
+        WHERE D is:
+            for t in d:
+                t is database size of tenant
+
+    4.FOURTH LINE OF INPUT: 3 * N integer in One Line
+        WHERE N triplets is: (Nmin, NBase, NMax)
+            They represent the minimum buffer size.
+                1.Minimum Buffer size
+                2.Base Buffer size
+                3.Maximum Buffer size
+            Sum of All Nmin value of all tenants are equal to or less than Q
+            This means that the total minimum buffer size requested by all tenants is less than or equal to the total buffer size available (Q).
+
