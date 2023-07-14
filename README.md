@@ -1,1 +1,1 @@
-# Leetcode and Codeforces
+# Competitive programming platform problems
