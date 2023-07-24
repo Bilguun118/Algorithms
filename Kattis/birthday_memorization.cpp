@@ -1,14 +1,22 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include <unordered_map>
+#include <vector>
 #include <utility>
 
 using namespace std;
 
 void memorize_birthday(unordered_map<string, pair<int, string>>& birthday_priorities) {
-    cout << birthday_priorities.size() << "\n";
+    vector<string>names;
     for(auto i: birthday_priorities) {
-        cout << i.second.second << "\n";
+        names.push_back(i.second.second);
+    }
+    sort(names.begin(), names.end());
+    int n = names.size();
+    cout << n << "\n";
+    for(int i = 0; i < n; i++) {
+        cout << names[i] << "\n";
     }
     return;
 }
