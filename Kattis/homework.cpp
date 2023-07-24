@@ -45,6 +45,32 @@ void do_homework(string problems) {
 int main() {
     string problems;
     cin >> problems;
-    do_homework(problems);
+    // do_homework(problems);
+    int sum = 0;
+    int a_current = 0, b_current = 0;
+    bool secondary = false;
+    for (auto ch : problems) {
+        if (ch >= '0' && ch <= '9') {
+            if (!secondary) a_current = a_current*10 + ch-'0';
+            else b_current = b_current*10 + ch-'0';
+        } else if (ch == '-') {
+            secondary = true;
+        } else {
+            if (!secondary) {
+                sum++;   a_current = 0;
+            } else {
+                sum += b_current - a_current + 1;
+                a_current = 0;
+                b_current = 0;
+                secondary = false;
+            }
+        }
+    }
+    if (!secondary) {
+        sum ++;
+    } else {
+        sum += b_current - a_current + 1;
+    }
+    cout << sum;
     return 0;
 }
