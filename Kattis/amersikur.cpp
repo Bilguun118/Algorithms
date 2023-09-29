@@ -1,15 +1,11 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main() {
     int N;
+    double ft_km = 0.09144;
     cin >> N;
-    while(N--) {
-        string names;
-        cin >> names;
-        
-    }
+    printf("%lf", ft_km * N);
     return 0;
 }
