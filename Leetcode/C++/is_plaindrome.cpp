@@ -1,32 +1,25 @@
 #include<iostream>
+#include<algorithm>
 #include<string>
 
 using namespace std;
 
-
-void reverseStr(string& str)
-{
-    int n = str.length();
- 
-    for (int i = 0; i < n / 2; i++)
-        swap(str[i], str[n - i - 1]);
-}
-
 bool isPalindrome(string s) {
     string converted;
     for(int i = 0; i < s.size(); i++) {
+        
+        if((s[i] >= 32 && s[i] <= 47) || (s[i] >= 58 && s[i] <= 64)) continue;
+        if((s[i] >= 91 && s[i] <= 96) || (s[i] >= 123 && s[i] <= 127)) continue;
+
         if(s[i] >= 'A' && s[i] <= 'Z') {
             s[i] = tolower(s[i]);
         }
-        if(s[i] >= 32 && s[i] <= 64) {
-            s[i] = 0;
-        }
+
+        converted += s[i];
     }
-    cout << s << "\n";
-    converted = s;
-    reverseStr(converted);
-    cout << "converted: " << converted << "\n";
-    return converted == s;
+    string chk = converted;
+    reverse(converted.begin(), converted.end());
+    return converted == chk;
 }
 
 
