@@ -12,7 +12,7 @@ struct TreeNode {
 
 vector<int> PreOrderTraversal(TreeNode* root) {
     vector<int>preorder;
-    if(root == NULL) {
+    if(!root) {
         return preorder;
     }
     stack<TreeNode*>st;
