@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<stack>
 
 using namespace std;
 
@@ -31,6 +32,7 @@ void findMode(TreeNode* current, vector<int>& ans, int& currentVal, int& freq, i
 }
 
 int main() {
+    // uses inorder traversal for keep track of sorted binary search tree
     TreeNode b;
     b.val = 2;
     b.left = NULL;
