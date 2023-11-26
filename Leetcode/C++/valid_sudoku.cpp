@@ -31,7 +31,6 @@ bool isValidSudoku(vector<vector<char>>board) {
                 if(box_memo.count(boxchar)) return false;
                 else box_memo.insert(boxchar);
             }
-
         }
     }
     return true;
