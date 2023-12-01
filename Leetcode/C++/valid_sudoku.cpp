@@ -34,7 +34,7 @@ bool isValidSudoku(vector<vector<char>>board) {
         }
     }
     return true;
-}
+}   
 
 int main() {
     vector<vector<char>>grid = {
