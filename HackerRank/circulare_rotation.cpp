@@ -9,16 +9,16 @@ vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) {
     int j = 0;
     vector<int>temp(n);
     for(int i = n-k; i < n; ++i, ++j) {
-        cout << a[i] << "\n";
         temp[j] = a[i];
     }
     for(int i = 0; i < n-k; ++i, ++j) {
         temp[j] = a[i];
     }
-    for(int q = 0; q < temp.size(); q++) {
-        cout << temp[q] << "\n";
+    vector<int>ans;
+    for(int i = 0; i < queries.size(); i++) {
+        ans.push_back(temp[queries[i]]);
     }
-    return temp;
+    return ans;
 }
 
 // [1,2,3] -> 2.3.1
