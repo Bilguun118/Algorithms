@@ -14,7 +14,15 @@ def minimize_weight_difference(stones, M):
     return dp[N][M]
 
 # Example usage:
-stones = [1, 2, 3, 4, 5]
-M = 3
-min_diff = minimize_weight_difference(stones, M)
-print("Minimum difference:", min_diff)
+# stones = [1, 2, 3, 4, 5]
+# M = 3
+# min_diff = minimize_weight_difference(stones, M)
+# print("Minimum difference:", min_diff)
+def test(a):
+    if a <= 0:
+        return
+    print(a)
+    test(a-1)
+    test(a-1)
+    
+print(test(3))
