@@ -1,18 +1,26 @@
 #include <iostream>
-#include <algorithm>
-#include <vector>
 
 using namespace std;
 
 int main() {
     int n, h;
+    int ans = 0, bend = 0;
     cin >> n >> h;
-    vector<int>a;
+    int f = n;
     while(n--) {
-        int temp;
-        cin >> temp;
-        a.push_back(temp);
+        int pheight;
+        cin >> pheight;
+        if (pheight > h) {
+            bend++;
+        }
     }
-    
+    for(int i = 0; i < f; i++) {
+        ans += 1;
+        if (bend > 0) {
+            ans += 1;
+            bend--;
+        }
+    }
+    cout << ans << "\n";
     return 0;
 }
