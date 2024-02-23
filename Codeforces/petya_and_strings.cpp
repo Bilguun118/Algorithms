@@ -6,18 +6,12 @@ using namespace std;
 // Petya and Strings CodeForces Submission
 int main(){
     string first, second;
-    for (int idx = 0; idx < first.size(); idx++){
-        if (first[idx] >= 'A' && first[idx] <= 'Z') {
-            first[idx] += 32;
-        }
-        if (second[idx] >= 'A' && second[idx] <= 'Z') {
-            second[idx] += 32;
-        }
-        if (first < second) {
-        cout << -1;
-        } else if (first > second) {
-            cout << 1;
-        }
+    cin >> first >> second;
+    for(int i = 0; i < first.size(); i++) {
+        char firstChr = toupper(first[i]);
+        char secondChr = toupper(second[i]);
+        if(firstChr < secondChr) {cout << -1; return 0;}
+        if(firstChr > secondChr) {cout << 1; return 0;}
     }
     cout << 0;
     return 0;
