@@ -12,9 +12,9 @@ int faster(int n) {
 }
 
 int main() {
-    long n, ans = 0;
+    long long n, ans = 0;
     cin >> n;
-    long i = 1, keeper;
+    long long i = 1, keeper;
     while(i <= n) {
         if((i ^ 1) == i-1) keeper = -i;
         else keeper = i;
