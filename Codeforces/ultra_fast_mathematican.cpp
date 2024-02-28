@@ -23,7 +23,6 @@ int naiveApproachTwo(int n1, int n2) {
     while(n1 > 0 && n2 > 0) {
         int digit1 = n1 % 10;
         int digit2 = n2 % 10;
-        cout << "d1: " << digit1 << " d2: " << digit2 << "\n"; 
         n1 /= 10;
         n2 /= 10;
         if(digit1 != digit2) {
