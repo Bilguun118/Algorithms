@@ -28,6 +28,30 @@ int naiveApproach(vector<int>lineup) {
     return ans;
 }
 
+int secondApproach(vector<int>lineup) {
+    int ans = 0;
+    int n = lineup.size();
+    int maxNum = INT_MIN;
+    int minNum = INT_MIN;
+    int maxIndex = 0;
+    int minIndex = 0;
+
+    // Determine Max and Min nums and index
+    for(int i = 0; i < n; i++) {
+        if(lineup[i] > maxNum) {
+            maxNum = lineup[i];
+            maxIndex = i;
+        }
+
+        if(lineup[i] <= minNum) {
+            minNum = lineup[i];
+            minIndex = i;
+        }
+    }
+    cout << maxIndex + (n - 1 + minIndex) - (minIndex < maxIndex ? 1: 0) << "\n";
+}
+
+
 int main() {
     int n;
     vector<int>lineup;
@@ -37,7 +61,7 @@ int main() {
         cin >> h;
         lineup.push_back(h);
     }
-    int ans = naiveApproach(lineup);
+    int ans = secondApproach(lineup);
     cout << ans;
     return 0;
 }
